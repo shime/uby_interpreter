@@ -1,6 +1,18 @@
 # UbyInterpreter
 
-TODO: Write a gem description
+Ruby-like interpreter implementation.
+
+Based on a [talk](https://www.youtube.com/watch?v=r1JMxJ06I98) by [Ryan Davis](https://github.com/zenspider).
+
+## Features
+
+* Basic numeric types, true, false, nil
+* Conditional branching and looping
+* Primitive and user defined functions
+* Local variables and variable scoping
+* Test-driven, extensible, patterns-based design
+* ~130 LOC for implementation, ~70 LOC for tests
+* Fits in one head
 
 ## Installation
 
@@ -16,9 +28,9 @@ Or install it yourself as:
 
     $ gem install uby_interpreter
 
-## Usage
+## Running tests
 
-TODO: Write usage instructions here
+    $ rake
 
 ## Contributing
 
