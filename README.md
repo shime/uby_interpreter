@@ -6,7 +6,7 @@ Based on a [talk](https://www.youtube.com/watch?v=r1JMxJ06I98) by [Ryan Davis](h
 
 ## Features
 
-* Basic numeric types, true, false, strings and nil
+* Basic numeric types, true, false, strings, arrays and nil
 * Conditional branching and looping
 * Primitive and user defined functions
 * Local variables and variable scoping

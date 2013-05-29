@@ -74,5 +74,12 @@ class UbyInterpreterTest < MiniTest::Test
 
   def test_strings
     assert_eval "i can has strings", %Q{"i can has strings"}
+    assert_eval "I CAN HAS STRINGS", %Q{"i can has strings".upcase}
+  end
+
+  def test_arrays
+    assert_eval [1, 2, 3],          "[1, 2, 3]"
+    assert_eval [1, 2, 3, 4, 5, 6], "[1, 2, 3] + [4, 5, 6]"
+    assert_eval 1,                  "[1, 2, 3].first"
   end
 end

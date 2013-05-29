@@ -138,4 +138,10 @@ class UbyInterpreter < SexpInterpreter
 
     string
   end
+
+  def process_array s
+    _, *args = s
+
+    args.map {|arg| arg.last}
+  end
 end
