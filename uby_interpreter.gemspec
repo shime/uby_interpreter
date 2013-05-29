@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["shime.ferovac@gmail.com"]
   spec.description   = %q{Simple Ruby interpreter}
   spec.summary       = %q{Simple Ruby interpreter}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/shime/uby_interpreter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
