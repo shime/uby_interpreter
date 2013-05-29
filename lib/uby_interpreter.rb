@@ -132,4 +132,10 @@ class UbyInterpreter < SexpInterpreter
       process_block s(:block, *body)
     end
   end
+
+  def process_str s
+    _, string = s
+
+    string
+  end
 end

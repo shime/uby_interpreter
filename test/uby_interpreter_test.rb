@@ -72,4 +72,7 @@ class UbyInterpreterTest < MiniTest::Test
     EOM
   end
 
+  def test_strings
+    assert_eval "i can has strings", %Q{"i can has strings"}
+  end
 end
