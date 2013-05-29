@@ -2,6 +2,9 @@ require "sexp_processor"
 require "ruby19_parser"
 
 class UbyInterpreter < SexpInterpreter
+
+  VERSION = "1.0.0"
+
   class Environment
     def [] k
       self.all[k]
@@ -27,11 +30,8 @@ class UbyInterpreter < SexpInterpreter
       @env = [{}]
     end
   end
-  VERSION = "1.0.0"
 
-  attr_accessor :parser
-
-  attr_accessor :env
+  attr_accessor :parser, :env
 
   def initialize
     super
