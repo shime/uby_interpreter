@@ -144,4 +144,15 @@ class UbyInterpreter < SexpInterpreter
 
     args.map {|arg| arg.last}
   end
+
+  def process_hash s
+    _, *args = s
+
+    args.each_slice(2).inject({}) do |hash, pair|
+      (_, key), (_, value) = pair
+
+      hash[key] = value
+      hash
+    end
+  end
 end

@@ -82,4 +82,9 @@ class UbyInterpreterTest < MiniTest::Test
     assert_eval [1, 2, 3, 4, 5, 6], "[1, 2, 3] + [4, 5, 6]"
     assert_eval 1,                  "[1, 2, 3].first"
   end
+
+  def test_hashes
+    hash = {:foo => :bar, :baz => :biz}
+    assert_eval hash, "{:foo => :bar, :baz => :biz}"
+  end
 end
