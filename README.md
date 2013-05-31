@@ -28,6 +28,20 @@ Or install it yourself as:
 
     $ gem install uby_interpreter
 
+## Usage
+
+Comes with executable.
+
+Run a file with
+
+    $ uby /path/to/your/file
+
+Or simply run
+
+    $ ./bin/uby example.rb
+
+to see what this little fellow can do!
+
 ## Running tests
 
     $ rake
