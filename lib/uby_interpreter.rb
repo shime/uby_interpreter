@@ -3,7 +3,7 @@ require "ruby19_parser"
 
 class UbyInterpreter < SexpInterpreter
 
-  VERSION = "1.0.0"
+  VERSION = "1.0.1"
 
   INTERNAL_METHODS = %w.print puts p.
 
