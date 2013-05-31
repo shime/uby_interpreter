@@ -87,4 +87,18 @@ class UbyInterpreterTest < MiniTest::Test
     hash = {:foo => :bar, :baz => :biz}
     assert_eval hash, "{:foo => :bar, :baz => :biz}"
   end
+
+  def test_printing
+    assert_output "I can has puts\n" do
+      assert_eval nil, "puts \"I can has puts\""
+    end
+
+    assert_output "I can has print" do
+      assert_eval nil, "print \"I can has print\""
+    end
+
+    assert_output "I can has p" do
+      assert_eval nil, "print \"I can has p\""
+    end
+  end
 end

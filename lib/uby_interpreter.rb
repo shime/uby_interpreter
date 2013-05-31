@@ -5,6 +5,8 @@ class UbyInterpreter < SexpInterpreter
 
   VERSION = "1.0.0"
 
+  INTERNAL_METHODS = %w.print puts p.
+
   class Environment
     def [] k
       self.all[k]
@@ -85,6 +87,12 @@ class UbyInterpreter < SexpInterpreter
     if recv then
       recv.send(msg, *args)
     else
+
+      if INTERNAL_METHODS.include? "#{msg}"
+        process_internal(msg, args)
+        return
+      end
+
       self.env.scope do
         decls, body = self.env[msg]
 
@@ -154,5 +162,21 @@ class UbyInterpreter < SexpInterpreter
       hash[key] = value
       hash
     end
+  end
+
+  def process_internal(msg, *args)
+    send("process_#{msg}", args.join)
+  end
+
+  def process_puts s
+    puts s
+  end
+
+  def process_print s
+    print s
+  end
+
+  def process_p s
+    p s
   end
 end
